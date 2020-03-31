@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Abstract.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564785000000000" />
+<file name="Alnum.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564785000000000" />
+<file name="Alpha.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564785000000000" />
+<file name="Barcode.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564785600000000" />
+<file name="Between.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564785600000000" />
+<file name="Callback.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="Ccnum.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="CreditCard.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="Date.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="Digits.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="EmailAddress.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="Exception.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="Float.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="GreaterThan.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="Hex.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786200000000" />
+<file name="Hostname.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="Iban.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="Identical.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="InArray.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="Int.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="Interface.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="Ip.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="Isbn.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="LessThan.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564786800000000" />
+<file name="NotEmpty.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564787400000000" />
+<file name="PostCode.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564787400000000" />
+<file name="Regex.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564787400000000" />
+<file name="StringLength.php" server="ftp.neowebdata.com/public_html/sitesa/" local="130386356200000000" remote="130564787400000000" />
+</dwsync>

@@ -1,0 +1,85 @@
+<?php
+class M_peminjaman extends CI_Model{
+
+	public function list_peminjaman($limit,$start,$cari_peminjaman){
+			$cari_peminjaman 			= $this->session->userdata('search_inv');
+		return $this->db->query("select * from tbl_peminjaman p, tbl_inventory i, admin a, tbl_member m,
+			tbl_jenis_member jm, tbl_category_inventory c, tbl_bahasa b, tbl_letak_rak lr,
+			tbl_klasifikasi k, tbl_pengarang pg,
+			tbl_penerbit pn, tbl_kota kt
+			where 
+			p.id_inventory=i.id_inventory and p.id_admin=a.id_admin and p.id_member=m.id_member and
+			m.id_jenis_member=jm.id_jenis_member and
+			i.id_category_inventory=c.id_category_inventory and i.id_bahasa=b.id_bahasa and
+			i.id_letak_rak=lr.id_letak_rak and i.klasifikasi1_inventory=k.id_klasifikasi and 
+			i.id_pengarang=pg.id_pengarang and i.id_penerbit=pn.id_penerbit and i.id_kota=kt.id_kota
+
+			and
+
+			p.tgl_peminjaman like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.tgl_tempo_peminjaman like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.id_inventory  like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.id_member like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.id_admin like'%".mysql_real_escape_string($cari_peminjaman)."%' 
+
+			order by id_peminjaman desc limit $start, $limit")->result();
+	}
+	public function jumlah_list_peminjaman(){
+	$cari_peminjaman 			= $this->session->userdata('search_inv');
+		return $this->db->query(" select * from tbl_peminjaman p, tbl_inventory i, admin a, tbl_member m,
+			tbl_jenis_member jm, tbl_category_inventory c, tbl_bahasa b, tbl_letak_rak lr,
+			tbl_klasifikasi k, tbl_pengarang pg,
+			tbl_penerbit pn, tbl_kota kt
+			where 
+			p.id_inventory=i.id_inventory and p.id_admin=a.id_admin and p.id_member=m.id_member and
+			m.id_jenis_member=jm.id_jenis_member and
+			i.id_category_inventory=c.id_category_inventory and i.id_bahasa=b.id_bahasa and
+			i.id_letak_rak=lr.id_letak_rak and i.klasifikasi1_inventory=k.id_klasifikasi and 
+			i.id_pengarang=pg.id_pengarang and i.id_penerbit=pn.id_penerbit and i.id_kota=kt.id_kota
+
+			and
+
+			p.tgl_peminjaman like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.tgl_tempo_peminjaman like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.id_inventory  like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.id_member like'%".mysql_real_escape_string($cari_peminjaman)."%'  or
+			p.id_admin like'%".mysql_real_escape_string($cari_peminjaman)."%'  ")->num_rows();
+	}
+	
+	public function peminjaman_add(){
+		$post_id_admin=$this->session->userdata('mzags-2k15-lmg-ind-user-admin-01-id');
+		$post_barcode_member=$this->input->post('barcode_member');
+		$post_barcode_inventory=$this->input->post('barcode_inventory');
+		$post_id=$this->input->post('id');
+		$post_id_member=$this->input->post('id_member');
+		$post_tgl=$this->input->post('tgl');
+		$post_tgl2=$this->input->post('tgl2');
+		$post_jumlah=$this->input->post('jumlah');
+		
+		$sql = "insert into tbl_peminjaman
+		(
+		id_member,
+		id_admin,
+		id_inventory,
+		tgl_peminjaman,
+		tgl_tempo_peminjaman,
+		jumlah_pinjam,
+		status_peminjaman,
+		status_trash
+		) values
+		(".$this->db->escape($post_id_member).",
+		".$this->db->escape($post_id_admin).",
+		".$this->db->escape($post_id).",
+		".$this->db->escape($post_tgl).",
+		".$this->db->escape($post_tgl2).",
+		".$this->db->escape($post_jumlah).",
+		1,
+		0
+		)";
+		$qsql = $this->db->query($sql);
+		return $qsql;
+	}
+	
+	
+}
+?>

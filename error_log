@@ -1,0 +1,10 @@
+[23-Aug-2019 11:16:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_pconnect() in /home/kencanahosting/perpus.kencanahosting.com/system/database/drivers/mysql/mysql_driver.php:91
+Stack trace:
+#0 /home/kencanahosting/perpus.kencanahosting.com/system/database/DB_driver.php(115): CI_DB_mysql_driver->db_pconnect()
+#1 /home/kencanahosting/perpus.kencanahosting.com/system/database/DB.php(148): CI_DB_driver->initialize()
+#2 /home/kencanahosting/perpus.kencanahosting.com/system/core/Loader.php(346): DB(Array, NULL)
+#3 /home/kencanahosting/perpus.kencanahosting.com/system/core/Loader.php(1171): CI_Loader->database()
+#4 /home/kencanahosting/perpus.kencanahosting.com/system/core/Loader.php(152): CI_Loader->_ci_autoloader()
+#5 /home/kencanahosting/perpus.kencanahosting.com/system/core/Controller.php(51): CI_Loader->initialize()
+#6 /home/kencanahosting/perpus.kencanahosting.com/application/controllers/pengembalian.php(4): CI_Controller->__construct()
+#7 /home/kencanahosting/perpus.kencanahosting.com/system/core/CodeIgniter.php(308): Pengemb in /home/kencanahosting/perpus.kencanahosting.com/system/database/drivers/mysql/mysql_driver.php on line 91
